@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<post>
+<topic>
 	<topic>
-		<userid>guest</userid>
-		<topic>Fallout 4</topic>
+		<UserID>Tommy1</UserID>
+		<Topic>Mass Effect</Topic>
 	</topic>
-	
-</post>
+	<topic>
+		<UserID>kpower77</UserID>
+		<Topic>Fallout 3</Topic>
+	</topic>
+	<topic>
+		<UserID>FunnyJack54</UserID>
+		<Topic>Xbox One backward compatability</Topic>
+	</topic>
+	<topic>
+		<UserID>digalo7</UserID>
+		<Topic>Star Wars</Topic>
+	</topic>
+</topic>
