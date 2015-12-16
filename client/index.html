@@ -61,27 +61,55 @@
     </head>
     
     <body>
-        <div class="container" ng-controller="ChatController">
+    <div class="container" ng-controller="ChatController">
     <div class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
-        <div class="pull-right">
-          <a href="https://c9.io" class="brand">Cloud9 IDE</a>
-        </div>
+    
       </div>
     </div>
-    <div class="page-header">
-      <h1>Games Forum</h1>
+    
+    <div class="container">
+        <div class="page-header">
+          <h1>Games Forum</h1>
+        </div>
+    </div>    
+    
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+        <div class="navbar-header">
+        <a class="navbar-brand" href="#">Games Forum</a>
+        </div>
+    
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
     </div>
+    </div>
+    </nav>
+    
     <div class="row">
       <div class="span4">
         <ul class="nav nav-list well">
           <li ng-repeat="user in roster" ng-bind="user">
-            <form method="post" id="form" action="/post/json">
+            
+            <form role="form" method="post" id="form" action="/post/json">
+              
+              <div class="form-group"> 
               <label for="userid">User ID</label>
-              <input type="text" id="userid" name="UserID">
+              <input type="text" class="form-control" id="userid" name="UserID">
+              </div>
+              
+              <div class="form-group">
               <label for="topic">Topic</label>
-              <input type="text" id="topic" name="Topic"><br/>
-              <input type="submit" value="Submit">
+              <input type="text" class="form-control" id="topic" name="Topic"><br/>
+              </div>
+              
+              <button type="submit" class="btn btn-default">Submit</button>
+            
             </form>
           </li>
         </ul>
