@@ -17,10 +17,9 @@
     </style>
     
     
-        <!-- Google Font -->
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <!-- Bootstrap minified CSS -->
+        <!-- Bootstrap minified CSS Link -->
         <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        
         <!-- local style sheet placed second so overrides bootstrap css  -->
         <link rel = "stylesheet" href = "client/css/style.css">
         
@@ -30,6 +29,18 @@
           <script src = "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src = "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+        
+        <!-- local JavaScript file -->
+        <script src = "script.js"></script>
+        
+        <!-- Bootstrap minified JavaScript -->
+        <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        
+        
+        
         
     <script>
         $(document).ready(function() {
@@ -43,7 +54,7 @@
             $.each(data, function(index, field) {
                 // Build a table row and append to the only existing table
                 tr = $('<tr/>');
-                tr.attr('class', field.Region   );
+                //tr.attr('class', field.Region   );
                 tr.append("<td>" + field.UserID + "</td>");
                 tr.append("<td>" + field.Topic + "</td>");
                 $('table').append(tr);
@@ -54,14 +65,12 @@
     </script>
         
         
-        
-        
-        
-        
     </head>
     
     <body>
     <div class="container" ng-controller="ChatController">
+    
+    
     <div class="navbar navbar-fixed-top navbar-inverse">
       <div class="navbar-inner">
     
@@ -74,27 +83,25 @@
         </div>
     </div>    
     
-    <nav class="navbar navbar-inverse">
-        <div class="container">
-        <div class="navbar-header">
-        <a class="navbar-brand" href="#">Games Forum</a>
-        </div>
     
-    <div>
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Page 1</a></li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
-      </ul>
+    <div class="container">
+      <div>
+        <nav class="navbar navbar-inverse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">PC</a></li>
+          <li><a href="#">PS4</a></li>
+          <li><a href="#">Xbox One</a></li>
+        </ul>
+        </nav>
+      </div>
     </div>
-    </div>
-    </nav>
     
-    <div class="row">
+    
+    <div class="container">
       <div class="span4">
-        <ul class="nav nav-list well">
-          <li ng-repeat="user in roster" ng-bind="user">
+        
+          
             
             <form role="form" method="post" id="form" action="/post/json">
               
@@ -108,30 +115,26 @@
               <input type="text" class="form-control" id="topic" name="Topic"><br/>
               </div>
               
-              <button type="submit" class="btn btn-default">Submit</button>
+              <button type="submit" class="btn btn-default">Submit</button><br/>
             
             </form>
-          </li>
-        </ul>
+          
+        
       </div>
-      <div class="span8">
-        <table>
-          <tr>
-            <th>UserID</th>
-            <th>Topic</th>
-          </tr>
+      
+      <!--<div class="span8">-->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>UserID</th>
+              <th>Topic</th>
+            </tr>
+          </thead>
         </table>
-      </div>
+      <!--</div>-->
     </div>
   </div>
         
-        
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
-    <!-- local JavaScript file -->
-    <script src = "script.js"></script>
-    <!-- Bootstrap minified JavaScript -->
-    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     
     </body>
 

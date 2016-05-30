@@ -16,4 +16,12 @@
 		<UserID>digalo7</UserID>
 		<Topic>Star Wars</Topic>
 	</topic>
+	<topic>
+		<UserID>larry21</UserID>
+		<Topic>Tomb Raider</Topic>
+	</topic>
+	<topic>
+		<UserID>test</UserID>
+		<Topic>testing</Topic>
+	</topic>
 </topic>

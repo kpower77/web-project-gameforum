@@ -3,7 +3,7 @@
 	<xsl:template match="/">
 		<html>
 			<head>
-				<style>
+				<!--<style>
 				  table {
 				    border-collapse: collapse;
 				  }
@@ -15,7 +15,7 @@
 				  th {
 				    font-weight: bold;
 				  }
-			  </style>
+			  </style>-->
 			</head>
 			<body>
 				<table>
@@ -23,7 +23,7 @@
 						<th>UserID</th>
 						<th>Topic</th>
 					</tr>
-					<xsl:for-each select="post/topic">
+					<xsl:for-each select="topics/topic">
 							<tr>
 								<td>
 									<xsl:value-of select="UserID"/>
